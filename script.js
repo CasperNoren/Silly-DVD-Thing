@@ -11,7 +11,8 @@ function preload() {
 function setup() {
 	createCanvas(800, 800);
 	let resizeRatio = 3.5;
-	maxBallSize = (maxBallSize / 800) * width; //Always keep the same ratio
+	// Always keep the same ratio
+	maxBallSize = (maxBallSize / 800) * width;
 
 	img.resize(
 		width / resizeRatio,
@@ -34,12 +35,14 @@ function setup() {
 
 function draw() {
 	background(0);
+	// The logo is just a unique version of the object class that has an image
 	tint(dvd.color, 100, 100);
 	image(img, dvd.x, dvd.y, dvd.width, dvd.height);
 	dvd.move();
 	dvd.borderCollision();
 	dvd.progressColor();
 
+	// Go through all the bouncing objects and step them
 	for (let i = 0; i < ballArr.length; i++) {
 		ballArr[i].move();
 		ballArr[i].borderCollision();
@@ -50,6 +53,7 @@ function draw() {
 }
 
 function mouseClicked() {
+	// Initialises a new bouncing object with random stats
 	ballArr.push(
 		new logo(
 			mouseX,
@@ -65,7 +69,10 @@ function mouseClicked() {
 	return false;
 }
 
+// Class that makes a bouncing object
 class logo {
+	// Class name should be updated to reflect it making balls too
+
 	constructor(x, y, xSpeed, ySpeed, width, height, color) {
 		this.x = x;
 		this.y = y;
@@ -82,6 +89,7 @@ class logo {
 	}
 
 	borderCollision() {
+		// Detect walls and change direction
 		if (this.x + this.width >= width) {
 			this.x = width - this.width;
 			this.xSpeed *= -1;
