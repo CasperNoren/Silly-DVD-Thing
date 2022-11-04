@@ -9,7 +9,9 @@ function preload() {
 }
 
 function setup() {
-	createCanvas(800, 800);
+	let dvdCanvas = createCanvas(800, 800);
+	dvdCanvas.parent(document.getElementById("dvd-canvas-div"));
+
 	let resizeRatio = 3.5;
 	// Always keep the same ratio
 	maxBallSize = (maxBallSize / 800) * width;
