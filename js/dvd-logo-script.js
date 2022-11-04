@@ -3,6 +3,7 @@ let dvd;
 let ballArr = new Array();
 let maxBallSpeed = 5;
 let maxBallSize = 40;
+let canavsColor = 0;
 
 function preload() {
 	img = loadImage("images/dvd-logo.png");
@@ -11,6 +12,9 @@ function preload() {
 function setup() {
 	let dvdCanvas = createCanvas(800, 800);
 	dvdCanvas.parent(document.getElementById("dvd-canvas-div"));
+	canavsColor = getComputedStyle(document.documentElement).getPropertyValue(
+		"--myrtle-green"
+	);
 
 	let resizeRatio = 3.5;
 	// Always keep the same ratio
@@ -36,7 +40,7 @@ function setup() {
 //15:46
 
 function draw() {
-	background(0);
+	background(canavsColor);
 	// The logo is just a unique version of the object class that has an image
 	tint(dvd.color, 100, 100);
 	image(img, dvd.x, dvd.y, dvd.width, dvd.height);
