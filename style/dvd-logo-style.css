@@ -1,0 +1,12 @@
+:root {
+	/* Colors?*/
+	--dark-jungle-green: #071e22ff;
+	--myrtle-green: #1d7874ff;
+	--wintergreen-dream: #679289ff;
+	--peach-crayola: #f4c095ff;
+	--red-pigment: #ee2e31ff;
+}
+
+.p5Canvas {
+	border: 1vw solid var(--peach-crayola);
+}
