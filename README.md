@@ -12,4 +12,7 @@ Not much but I made it really quickly
 * Balls have random size and speed
 </br>
 
+# Info
+Written in JavaScript using the P5 library displayed in a Canvas with HTML and very minor CSS
+
 # That's it.
