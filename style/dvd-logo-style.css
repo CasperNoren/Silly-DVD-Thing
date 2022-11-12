@@ -5,8 +5,14 @@
 	--wintergreen-dream: #679289ff;
 	--peach-crayola: #f4c095ff;
 	--red-pigment: #ee2e31ff;
+
+	--dark-accent-color: #21295cff;
+	--main-color: #1b3b6fff;
+	--main-color-light: #065a82ff;
+	--main-accent-color: #1c7293ff;
+	--secondary-accent-color: #9eb3c2ff;
 }
 
 .p5Canvas {
-	border: 1vw solid var(--peach-crayola);
+	border: 1vw solid var(--main-accent-color);
 }

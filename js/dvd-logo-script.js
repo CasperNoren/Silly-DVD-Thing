@@ -13,7 +13,7 @@ function setup() {
 	let dvdCanvas = createCanvas(800, 800);
 	dvdCanvas.parent(document.getElementById("dvd-canvas-div"));
 	canavsColor = getComputedStyle(document.documentElement).getPropertyValue(
-		"--myrtle-green"
+		"--main-color"
 	);
 
 	let resizeRatio = 3.5;
